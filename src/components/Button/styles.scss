@@ -1,0 +1,12 @@
+@use "../../styles/variables.scss";
+
+button {
+  background: variables.$btn;
+  border: none;
+  border-radius: 5px;
+  color: variables.$text;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 0.5rem;
+  width: 100%;
+}
