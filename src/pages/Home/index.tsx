@@ -4,8 +4,8 @@ import { Input } from "../../components/Input"
 import { Button } from "../../components/Button"
 
 export function Home() {
-  const [weight, setWeight] = useState()
-  const [height, setHeight] = useState()
+  const [weight, setWeight] = useState<number | undefined>()
+  const [height, setHeight] = useState<number | undefined>()
   const [imc, setImc] = useState("")
   const [classification, setClassification] = useState("")
   const [values, setValues] = useState("")
@@ -60,12 +60,12 @@ export function Home() {
       <div className="content">
         <div>
           <p>Peso (Kg)</p>
-          <Input value={weight} onChange={setWeight}/>
+          <Input value={weight} onChange={(value) => setWeight(value)} />
         </div>
 
         <div>
           <p>Altura (m)</p>
-          <Input value={height} onChange={setHeight}/>
+          <Input value={height} onChange={(value) => setHeight(value)}/>
         </div>
         
         <Button title="Calcular" onClick={showIMC}/>
