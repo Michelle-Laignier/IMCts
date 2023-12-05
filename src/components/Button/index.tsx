@@ -1,12 +1,13 @@
 import "./styles.scss"
 
 interface ButtonProps {
-  title: string
+  title: string,
+  onClick: () => void,
 }
 
-export function Button({ title }:ButtonProps ) {
+export function Button({ title, onClick }:ButtonProps ) {
   return(
-    <button>
+    <button onClick={onClick}>
       {title}
     </button>
   )
